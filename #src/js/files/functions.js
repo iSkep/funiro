@@ -262,11 +262,11 @@ if (spoilersArray.length > 0) {
         });
     }
     // Работа с контентом
-    function initspoilerBody(spoilersBlock, hidespoilerBody = true) {
+    function initSpoilerBody(spoilersBlock, hideSpoilerBody = true) {
         const spoilerTitles = spoilersBlock.querySelectorAll('[data-spoiler]');
         if (spoilerTitles.length > 0) {
             spoilerTitles.forEach(spoilerTitle => {
-                if (hidespoilerBody) {
+                if (hideSpoilerBody) {
                     spoilerTitle.removeAttribute('tabindex');
                     if (!spoilerTitle.classList.contains('_active')) {
                         spoilerTitle.nextElementSibling.hidden = true;
@@ -278,15 +278,15 @@ if (spoilersArray.length > 0) {
             });
         }
     }
-    function setspoilerAction(e) {
+    function setSpoilerAction(e) {
         const el = e.target;
         if (el.hasAttribute('data-spoiler') || el.closest('[data-spoiler]')) {
             const spoilerTitle = el.hasAttribute('data-spoiler') ? el : el.closest('[data-spoiler]');
             const spoilersBlock = spoilerTitle.closest('[data-spoilers]');
-            const onespoiler = spoilersBlock.hasAttribute('data-one-spoiler') ? true : false;
+            const oneSpoiler = spoilersBlock.hasAttribute('data-one-spoiler') ? true : false;
             if (!spoilersBlock.querySelectorAll('._slide').length) {
-                if (onespoiler && !spoilerTitle.classList.contains('_active')) {
-                    hidespoilersBody(spoilersBlock);
+                if (oneSpoiler && !spoilerTitle.classList.contains('_active')) {
+                    hideSpoilersBody(spoilersBlock);
                 }
                 spoilerTitle.classList.toggle('_active');
                 _slideToggle(spoilerTitle.nextElementSibling, 500);
@@ -294,7 +294,7 @@ if (spoilersArray.length > 0) {
             e.preventDefault();
         }
     }
-    function hidespoilersBody(spoilersBlock) {
+    function hideSpoilersBody(spoilersBlock) {
         const spoilerActiveTitle = spoilersBlock.querySelector('[data-spoiler]._active');
         if (spoilerActiveTitle) {
             spoilerActiveTitle.classList.remove('_active');
