@@ -17,16 +17,14 @@
 //</FORM>====================================================================================================
 
 //<BUTTONS (a.btn+tab)>====================================================================================================
-.button {
+.btn {
     display: inline-flex;
-    padding: 0px 0px;
-    @media (any-hover: hover) {
-        &:hover {
-        }
-    }
-    &._fw {
-        width: 100%;
-    }
+    justify-content: center;
+    align-items: center;
+    padding: 0px 15px;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+    min-height: 48px;
 }
 //</BUTTONS>====================================================================================================
 
@@ -44,7 +42,7 @@
         background-color: #fff;
         cursor: pointer;
         border-radius: 4px;
-        @media (max-width: $md2 + px) {
+        @media (max-width: $md2 + "px") {
             font-size: 18px;
         }
     }
@@ -87,12 +85,11 @@
         min-width: 100%;
         left: 0;
         background-color: #fff;
-        border-top: 0;
         border: 1px solid #d9d9d9;
         border-top: 0;
         font-size: 14px;
         padding: 10px 0px 5px 0px;
-        @media (max-width: $md2 + px) {
+        @media (max-width: $md2 + "px") {
             font-size: 18px;
         }
     }
@@ -354,7 +351,7 @@ textarea.input {
             width: 9px;
             height: 1px;
         }
-        @media (min-width: $md2 + px) {
+        @media (min-width: $md2 + "px") {
             &:hover {
                 &::before,
                 &::after {
