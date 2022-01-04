@@ -87,215 +87,257 @@ body {
 }
 //===================================================================================================================================
 .main-slider {
-	background: #fcf8f3;
-	// .main-slider__container
-	&__container {
-		position: relative;
-		@media (min-width: $md2 + "px") {
-			&::before {
-				content: "";
-				background: #f9f1e7;
-				position: absolute;
-				top: 0;
-				width: 100vw;
-				right: 376px;
-				height: 100%;
-			}
-		}
-	}
-	// .main-slider__body
-	&__body {
-		padding: 140px 0px 0px 0px;
-		position: relative;
-		z-index: 2;
-		@media (max-width: $md2 + "px") {
-			padding: 80px 0px 0px 0px;
-		}
-		@media (max-width: $md3 + "px") {
-			padding: 50px 0px 0px 0px;
-		}
-		@media (min-width: $md2 + "px") {
-			display: flex;
-		}
-	}
-	// .main-slider__content
-	&__content {
-		align-self: flex-start;
-		flex: 0 0 math.div(494, 1240) * 100%;
-		@include adaptive-value("margin-bottom", 80, 15, 1);
-		@media (max-width: $md2 + "px") {
-			margin: 0px -15px;
-		}
-	}
-	// .main-slider__slider
-	&__slider {
-		flex: 1 1 auto;
-		min-width: 0;
-		align-self: flex-end;
-		@media (min-width: $md2 + "px") {
-			padding: 0px 0px 0px 32px;
-		}
-	}
+    background: #fcf8f3;
+    // .main-slider__container
+    &__container {
+        position: relative;
+        @media (min-width: $md2 + "px") {
+            &::before {
+                content: "";
+                background: #f9f1e7;
+                position: absolute;
+                top: 0;
+                width: 100vw;
+                right: 376px;
+                height: 100%;
+            }
+        }
+    }
+    // .main-slider__body
+    &__body {
+        padding: 140px 0px 0px 0px;
+        position: relative;
+        z-index: 2;
+        @media (max-width: $md2 + "px") {
+            padding: 80px 0px 0px 0px;
+        }
+        @media (max-width: $md3 + "px") {
+            padding: 50px 0px 0px 0px;
+        }
+        @media (min-width: $md2 + "px") {
+            display: flex;
+        }
+    }
+    // .main-slider__content
+    &__content {
+        align-self: flex-start;
+        flex: 0 0 math.div(494, 1240) * 100%;
+        @include adaptive-value("margin-bottom", 80, 15, 1);
+        @media (max-width: $md2 + "px") {
+            margin: 0px -15px;
+        }
+    }
+    // .main-slider__slider
+    &__slider {
+        flex: 1 1 auto;
+        min-width: 0;
+        align-self: flex-end;
+        @media (min-width: $md2 + "px") {
+            padding: 0px 0px 0px 32px;
+        }
+    }
 }
 .content-main {
-	position: relative;
-	z-index: 5;
-	padding-left: 15px;
-	padding-right: 15px;
-	background: rgba(255, 255, 255, 0.72);
-	@include adaptive-value("padding-top", 60, 15, 1);
-	@include adaptive-value("padding-bottom", 60, 15, 1);
-	@media (min-width: $md2 + "px") {
-		@include adaptive-value("padding", 60, 1, 1);
-		background: rgba(255, 255, 255, 0.9);
-		/* If browser supports backdrop-filter */
-		@supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
-			background: rgba(255, 255, 255, 0.72);
-			backdrop-filter: blur(31px);
-		}
-	}
-	// .content-main__title
-	&__title {
-		@include adaptive-value("font-size", 56, 24, 1);
-		font-weight: 700;
-		line-height: 120%;
-		&:not(:last-child) {
-			margin: 0px 0px math.div(16px, 56px) * 1em 0px;
-		}
-	}
-	// .content-main__text
-	&__text {
-		@include adaptive-value("font-size", 20, 16, 1);
-		color: $grayColor;
-		font-weight: 500;
-		line-height: 150%;
-		&:not(:last-child) {
-			margin: 0px 0px math.div(48px, 20px) * 1em 0px;
-		}
-	}
-	// .content-main__button
-	&__button {
-		font-weight: 600;
-		@include adaptive-value("min-height", 78, 45, 1);
-		@include adaptive-value("font-size", 20, 16, 1);
-		background-color: $orangeColor;
-		color: #fff;
-		width: 100%;
-		@media (any-hover: hover) {
-			&:hover {
-				background: #966749;
-			}
-		}
-	}
+    position: relative;
+    z-index: 5;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: rgba(255, 255, 255, 0.72);
+    @include adaptive-value("padding-top", 60, 15, 1);
+    @include adaptive-value("padding-bottom", 60, 15, 1);
+    @media (min-width: $md2 + "px") {
+        @include adaptive-value("padding", 60, 1, 1);
+        background: rgba(255, 255, 255, 0.9);
+        /* If browser supports backdrop-filter */
+        @supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
+            background: rgba(255, 255, 255, 0.72);
+            backdrop-filter: blur(31px);
+        }
+    }
+    // .content-main__title
+    &__title {
+        @include adaptive-value("font-size", 56, 24, 1);
+        font-weight: 700;
+        line-height: 120%;
+        &:not(:last-child) {
+            margin: 0px 0px math.div(16px, 56px) * 1em 0px;
+        }
+    }
+    // .content-main__text
+    &__text {
+        @include adaptive-value("font-size", 20, 16, 1);
+        color: $grayColor;
+        font-weight: 500;
+        line-height: 150%;
+        &:not(:last-child) {
+            margin: 0px 0px math.div(48px, 20px) * 1em 0px;
+        }
+    }
+    // .content-main__button
+    &__button {
+        font-weight: 600;
+        @include adaptive-value("min-height", 78, 45, 1);
+        @include adaptive-value("font-size", 20, 16, 1);
+        background-color: $orangeColor;
+        color: #fff;
+        width: 100%;
+        @media (any-hover: hover) {
+            &:hover {
+                background: #966749;
+            }
+        }
+    }
 }
 .slider-main {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
-	@media (max-width: $md2 + "px") {
-		align-items: stretch;
-		flex-direction: column-reverse;
-	}
-	// .slider-main__controls
-	&__controls {
-		align-self: stretch;
-		margin: 0px 0px 20px 0px;
-		@media (max-width: $md2 + "px") {
-			margin: 10px 0px 20px 0px;
-		}
-	}
-	// .slider-main__body
-	&__body {
-		overflow: visible;
-		@media (min-width: $md2 + "px") {
-			@include adaptive-value("width", 934, 290, 1);
-		}
-		@media (max-width: $md2 + "px") {
-			margin: 0px -15px;
-		}
-	}
-	// .slider-main__slide
-	&__slide {
-		position: relative;
-	}
-	// .slider-main__image
-	&__image {
-		padding: 0px 0px 59.1% 0px;
-	}
-	// .slider-main__content
-	&__content {
-		min-width: 295px;
-		max-height: 300px;
-		overflow: auto;
-		color: inherit;
-		display: flex;
-		flex-direction: column;
-		@include adaptive-value("padding", 24, 15, 1);
-		background: rgba(255, 255, 255, 0.9);
-		@media (min-width: $md3 + "px") {
-			position: absolute;
-			min-width: 350px;
-			@include adaptive-value("right", 40, 0, 1);
-			@include adaptive-value("bottom", 40, 0, 1);
-		}
-		/* If browser supports backdrop-filter */
-		@supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
-			background: rgba(255, 255, 255, 0.72);
-			backdrop-filter: blur(31px);
-		}
-	}
-	// .slider-main__title
-	&__title {
-		@include adaptive-value("font-size", 28, 22, 1);
-		font-weight: 600;
-		line-height: 120%;
-		&:not(:last-child) {
-			margin: 0px 0px math.div(4px, 28px) * 1em 0px;
-		}
-	}
-	// .slider-main__text
-	&__text {
-		line-height: 150%;
-		color: $grayColor;
-		&:not(:last-child) {
-			margin: 0px 0px math.div(8px, 16px) * 1em 0px;
-		}
-	}
-	// .slider-main__price
-	&__price {
-		display: flex;
-		flex-direction: row-reverse;
-		line-height: 150%;
-		align-items: center;
-		font-weight: 600;
-		justify-content: space-between;
-		@include adaptive-value("font-size", 20, 16, 1);
-		&::before {
-			margin: 0px 0px 0px 10px;
-			font-size: 12px;
-		}
-	}
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    @media (max-width: $md2 + "px") {
+        align-items: stretch;
+        flex-direction: column-reverse;
+    }
+    // .slider-main__controls
+    &__controls {
+        align-self: stretch;
+        margin: 0px 0px 20px 0px;
+        @media (max-width: $md2 + "px") {
+            margin: 10px 0px 20px 0px;
+        }
+    }
+    // .slider-main__body
+    &__body {
+        overflow: visible;
+        @media (min-width: $md2 + "px") {
+            @include adaptive-value("width", 934, 290, 1);
+        }
+        @media (max-width: $md2 + "px") {
+            margin: 0px -15px;
+        }
+    }
+    // .slider-main__slide
+    &__slide {
+        position: relative;
+    }
+    // .slider-main__image
+    &__image {
+        padding: 0px 0px 59.1% 0px;
+    }
+    // .slider-main__content
+    &__content {
+        min-width: 295px;
+        max-height: 300px;
+        overflow: auto;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        @include adaptive-value("padding", 24, 15, 1);
+        background: rgba(255, 255, 255, 0.9);
+        @media (min-width: $md3 + "px") {
+            position: absolute;
+            min-width: 350px;
+            @include adaptive-value("right", 40, 0, 1);
+            @include adaptive-value("bottom", 40, 0, 1);
+        }
+        /* If browser supports backdrop-filter */
+        @supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
+            background: rgba(255, 255, 255, 0.72);
+            backdrop-filter: blur(31px);
+        }
+    }
+    // .slider-main__title
+    &__title {
+        @include adaptive-value("font-size", 28, 22, 1);
+        font-weight: 600;
+        line-height: 120%;
+        &:not(:last-child) {
+            margin: 0px 0px math.div(4px, 28px) * 1em 0px;
+        }
+    }
+    // .slider-main__text
+    &__text {
+        line-height: 150%;
+        color: $grayColor;
+        &:not(:last-child) {
+            margin: 0px 0px math.div(8px, 16px) * 1em 0px;
+        }
+    }
+    // .slider-main__price
+    &__price {
+        display: flex;
+        flex-direction: row-reverse;
+        line-height: 150%;
+        align-items: center;
+        font-weight: 600;
+        justify-content: space-between;
+        @include adaptive-value("font-size", 20, 16, 1);
+        &::before {
+            margin: 0px 0px 0px 10px;
+            font-size: 12px;
+        }
+    }
 }
 .controls-slider-main {
-	display: flex;
-	align-items: center;
-	// .controls-slider-main__dots
-	&__dots {
-		flex: 1 1 auto;
-		@media (min-width: $md2 + "px") {
-			padding: 0px 20px 0px 0px;
-		}
-		@media (max-width: $md2 + "px") {
-			justify-content: center;
-		}
-	}
-	// .controls-slider-main__arrows
-	&__arrows {
-		@media (max-width: $md2 + "px") {
-			display: none;
-		}
-	}
+    display: flex;
+    align-items: center;
+    // .controls-slider-main__dots
+    &__dots {
+        flex: 1 1 auto;
+        @media (min-width: $md2 + "px") {
+            padding: 0px 20px 0px 0px;
+        }
+        @media (max-width: $md2 + "px") {
+            justify-content: center;
+        }
+    }
+    // .controls-slider-main__arrows
+    &__arrows {
+        @media (max-width: $md2 + "px") {
+            display: none;
+        }
+    }
 }
 //========================================================================================================================================================
-
+.advantages {
+    @include adaptive-value("padding-top", 88, 30, 1);
+    @include adaptive-value("padding-bottom", 88, 30, 1);
+    // .advantages__container
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    // .advantages__item
+    &__item {
+        display: inline-grid;
+        padding: 15px 0;
+        grid-template: auto auto / 85px 1fr;
+        @media (max-width: $md2 + "px") {
+            min-width: 280px;
+        }
+        @media (max-width: $md3 + "px") {
+            grid-template: auto auto / auto 1fr;
+        }
+    }
+    // .advantages__icon
+    &__icon {
+        text-align: center;
+        align-self: center;
+        grid-row: span 2;
+        @media (max-width: $md3 + "px") {
+            padding: 0px 15px 0px 0px;
+        }
+    }
+    // .advantages__title
+    &__title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 150%;
+        margin: 0px 0px math.div(2px, 18px) * 1em 0px;
+    }
+    // .advantages__text
+    &__text {
+        line-height: 150%;
+        color: $grayColor;
+    }
+}
 //</ОСНОВНОЙ БЛОК>====================================================================================================
