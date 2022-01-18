@@ -49,11 +49,11 @@ body {
 
 //<ОБОЛОЧКА>===========================================================================================================
 .wrapper {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     min-height: 100%;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
     &._loaded {
     }
 }
@@ -94,20 +94,20 @@ body {
         @media (min-width: $md2 + "px") {
             &::before {
                 content: "";
-                background: #f9f1e7;
                 position: absolute;
                 top: 0;
-                width: 100vw;
                 right: 376px;
+                width: 100vw;
                 height: 100%;
+                background: #f9f1e7;
             }
         }
     }
     // .main-slider__body
     &__body {
-        padding: 140px 0px 0px 0px;
         position: relative;
         z-index: 2;
+        padding: 140px 0px 0px 0px;
         @media (max-width: $md2 + "px") {
             padding: 80px 0px 0px 0px;
         }
@@ -120,8 +120,8 @@ body {
     }
     // .main-slider__content
     &__content {
-        align-self: flex-start;
         flex: 0 0 math.div(494, 1240) * 100%;
+        align-self: flex-start;
         @include adaptive-value("margin-bottom", 80, 15, 1);
         @media (max-width: $md2 + "px") {
             margin: 0px -15px;
@@ -130,8 +130,8 @@ body {
     // .main-slider__slider
     &__slider {
         flex: 1 1 auto;
-        min-width: 0;
         align-self: flex-end;
+        min-width: 0;
         @media (min-width: $md2 + "px") {
             padding: 0px 0px 0px 32px;
         }
@@ -166,9 +166,9 @@ body {
     // .content-main__text
     &__text {
         @include adaptive-value("font-size", 20, 16, 1);
-        color: $grayColor;
         font-weight: 500;
         line-height: 150%;
+        color: $grayColor;
         &:not(:last-child) {
             margin: 0px 0px math.div(48px, 20px) * 1em 0px;
         }
@@ -178,9 +178,9 @@ body {
         font-weight: 600;
         @include adaptive-value("min-height", 78, 45, 1);
         @include adaptive-value("font-size", 20, 16, 1);
+        width: 100%;
         background-color: $orangeColor;
         color: #fff;
-        width: 100%;
         @media (any-hover: hover) {
             &:hover {
                 background: #966749;
@@ -224,12 +224,12 @@ body {
     }
     // .slider-main__content
     &__content {
+        display: flex;
+        flex-direction: column;
         min-width: 295px;
         max-height: 300px;
         overflow: auto;
         color: inherit;
-        display: flex;
-        flex-direction: column;
         @include adaptive-value("padding", 24, 15, 1);
         background: rgba(255, 255, 255, 0.9);
         @media (min-width: $md3 + "px") {
@@ -265,10 +265,10 @@ body {
     &__price {
         display: flex;
         flex-direction: row-reverse;
-        line-height: 150%;
-        align-items: center;
-        font-weight: 600;
         justify-content: space-between;
+        align-items: center;
+        line-height: 150%;
+        font-weight: 600;
         @include adaptive-value("font-size", 20, 16, 1);
         &::before {
             margin: 0px 0px 0px 10px;
@@ -303,14 +303,14 @@ body {
     // .advantages__container
     &__container {
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     // .advantages__item
     &__item {
         display: inline-grid;
-        padding: 15px 0;
         grid-template: auto auto / 85px 1fr;
+        padding: 15px 0;
         @media (max-width: $md2 + "px") {
             min-width: 280px;
         }
@@ -320,19 +320,19 @@ body {
     }
     // .advantages__icon
     &__icon {
+        grid-row: span 2;
         text-align: center;
         align-self: center;
-        grid-row: span 2;
         @media (max-width: $md3 + "px") {
             padding: 0px 15px 0px 0px;
         }
     }
     // .advantages__title
     &__title {
-        font-weight: 600;
-        font-size: 18px;
-        line-height: 150%;
         margin: 0px 0px math.div(2px, 18px) * 1em 0px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 150%;
     }
     // .advantages__text
     &__text {
@@ -366,8 +366,8 @@ body {
     }
     // .products__more
     &__more {
-        border: 1px solid $orangeColor;
         min-width: 245px;
+        border: 1px solid $orangeColor;
         &._hold {
             opacity: 0.4;
             cursor: default;
@@ -375,10 +375,10 @@ body {
     }
 }
 .item-product {
-    background: #f4f5f7;
+    position: relative;
     display: flex;
     flex-direction: column;
-    position: relative;
+    background: #f4f5f7;
     @media (any-hover: hover) {
         &:hover {
             .item-product__actions {
@@ -398,14 +398,14 @@ body {
     }
     // .item-product__label
     &__label {
-        flex: 0 0 48px;
-        width: 48px;
-        border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
-        color: #fff;
+        flex: 0 0 48px;
+        width: 48px;
         font-weight: 500;
+        border-radius: 50%;
+        color: #fff;
         &:not(:last-child) {
             margin: 0px 0px 10px 0px;
         }
@@ -424,10 +424,10 @@ body {
     }
     // .item-product__body
     &__body {
-        flex: 1 1 auto;
-        padding: 16px 16px 30px 16px;
         display: flex;
         flex-direction: column;
+        flex: 1 1 auto;
+        padding: 16px 16px 30px 16px;
     }
     // .item-product__content
     &__content {
@@ -436,15 +436,15 @@ body {
     // .item-product__title
     &__title {
         @include adaptive-value("font-size", 24, 20, 1);
+        margin: 0px 0px math.div(8px, 24px) * 1em 0px;
         font-weight: 600;
         line-height: 120%;
-        margin: 0px 0px math.div(8px, 24px) * 1em 0px;
     }
     // .item-product__text
     &__text {
-        color: $grayColor;
-        line-height: 150%;
         margin: 0px 0px math.div(8px, 24px) * 1em 0px;
+        line-height: 150%;
+        color: $grayColor;
     }
     // .item-product__prices
     &__prices {
@@ -460,8 +460,8 @@ body {
         // .item-product__price_old
         &_old {
             @include adaptive-value("font-size", 16, 14, 1);
-            font-weight: normal;
             margin: 0px 0px 0px 16px;
+            font-weight: normal;
             color: #b0b0b0;
             text-decoration: line-through;
         }
@@ -472,19 +472,19 @@ body {
             padding: 15px 0px 0px 0px;
         }
         @media (any-hover: hover) {
-            opacity: 0;
-            visibility: hidden;
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
+            z-index: 3;
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: all 0.3s ease 0s;
+            width: 100%;
+            height: 100%;
             background-color: rgba(58, 58, 58, 0.74);
-            z-index: 3;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease 0s;
         }
     }
 }
@@ -510,8 +510,8 @@ body {
     &__link {
         display: flex;
         align-items: center;
-        color: inherit;
         font-weight: 600;
+        color: inherit;
         transition: color 0.3s ease 0s;
         &::before {
             margin: 0px 10px 0px 0px;
@@ -538,9 +538,9 @@ body {
     }
     // .rooms__body
     &__body {
-        flex: 0 0 math.div(465, 1240) * 100%;
         position: relative;
         z-index: 5;
+        flex: 0 0 math.div(465, 1240) * 100%;
         align-self: center;
         @media (min-width: $md2 + "px") {
             @include adaptive-value("padding-right", 80, 30, 1);
@@ -558,17 +558,17 @@ body {
     }
     // .rooms__text
     &__text {
-        line-height: 150%;
         font-weight: 500;
+        line-height: 150%;
         &:not(:last-child) {
             margin: 0px 0px 24px 0px;
         }
     }
     // .rooms__button
     &__button {
+        min-width: 180px;
         background: $orangeColor;
         color: #fff;
-        min-width: 180px;
         @media (any-hover: hover) {
             &:hover {
                 background-color: #8d6146;
@@ -589,24 +589,24 @@ body {
     position: relative;
     // .slider-rooms__body
     &__body {
-        overflow: visible;
         position: relative;
+        overflow: visible;
         &::before {
             content: "";
             position: absolute;
             top: 0;
+            left: 0;
+            z-index: 2;
             height: 100%;
             width: 100vw;
-            left: 0;
             background-color: #fcf8f3;
-            z-index: 2;
             transform: translate(-100%, 0px);
         }
     }
     // .slider-rooms__slide
     &__slide {
-        width: 372px;
         position: relative;
+        width: 372px;
         overflow: hidden;
         @include adaptive-value("min-height", 585, 400, 1);
         &.swiper-slide-active {
@@ -625,8 +625,8 @@ body {
     }
     // .slider-rooms__image
     &__image {
-        transition: height 0.8s ease 0s;
         height: 100%;
+        transition: height 0.8s ease 0s;
         @media (min-width: $md3 + "px") {
             height: 83%;
         }
@@ -634,13 +634,13 @@ body {
     // .slider-rooms__content
     &__content {
         position: absolute;
-        color: inherit;
         max-width: 240px;
+        color: inherit;
         @include adaptive-value("left", 24, 15, 1);
         @include adaptive-value("bottom", 24, 15, 1);
         @include adaptive-value("padding", 32, 15, 1);
         background: rgba(255, 255, 255, 0.9);
-        /* Если браузер поддерживает backdrop-filter */
+        /* If browser supports backdrop-filter */
         @supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
             background: rgba(255, 255, 255, 0.72);
             backdrop-filter: blur(31px);
@@ -649,14 +649,14 @@ body {
             position: absolute;
             bottom: 0;
             right: 0;
-            transform: translate(100%, 0px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 48px;
             height: 48px;
             background-color: $orangeColor;
             color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            transform: translate(100%, 0px);
         }
     }
     // .slider-rooms__label
@@ -669,14 +669,14 @@ body {
     }
     // .slider-rooms__arrows
     &__arrows {
-        pointer-events: none;
         position: absolute;
         top: 50%;
-        transform: translate(0px, -50%);
-        width: calc(100% - 48px);
         left: 24px;
         z-index: 5;
         justify-content: space-between;
+        width: calc(100% - 48px);
+        transform: translate(0px, -50%);
+        pointer-events: none;
         @media (min-width: $md1 + "px") {
             left: -24px;
             width: calc(100% + 48px);
@@ -687,8 +687,8 @@ body {
         @media (min-width: $md3 + "px") {
             position: absolute;
             bottom: 30px;
-            width: 100%;
             left: 396px;
+            width: 100%;
         }
         @media (max-width: $md3 + "px") {
             justify-content: center;
@@ -698,11 +698,11 @@ body {
 }
 .label-slider {
     display: grid;
-    color: $darkGrayColor;
-    gap: 8px;
     align-items: center;
     justify-content: start;
     grid-template-columns: auto 27px auto;
+    gap: 8px;
+    color: $darkGrayColor;
     &:not(:last-child) {
         margin: 0px 0px 8px 0px;
     }
@@ -758,17 +758,17 @@ body {
     // .slider-tips__content
     &__content {
         display: flex;
-        flex-direction: column;
-        padding: 15px;
         flex: 1 1 auto;
+        flex-direction: column;
         align-items: flex-start;
+        padding: 15px;
     }
     // .slider-tips__title
     &__title {
         flex: 1 1 auto;
-        color: inherit;
         font-weight: 600;
         line-height: 120%;
+        color: inherit;
         @include adaptive-value("font-size", 24, 18, 1);
         transition: color 0.3s ease 0s;
         &:not(:last-child) {
@@ -782,9 +782,9 @@ body {
     }
     // .slider-tips__text
     &__text {
-        color: $grayColor;
         font-size: 14px;
         line-height: 150%;
+        color: $grayColor;
     }
     // .slider-tips__dots
     &__dots {
@@ -793,14 +793,14 @@ body {
     }
     // .slider-tips__arrows
     &__arrows {
-        pointer-events: none;
         position: absolute;
         top: 50%;
-        transform: translate(0px, -50%);
-        width: calc(100% - 48px);
         left: 24px;
         z-index: 5;
         justify-content: space-between;
+        width: calc(100% - 48px);
+        transform: translate(0px, -50%);
+        pointer-events: none;
         @media (min-width: $md1 + "px") {
             left: -24px;
             width: calc(100% + 48px);
@@ -819,8 +819,8 @@ body {
     // .furniture__label
     &__label {
         text-align: center;
-        color: $darkGrayColor;
         line-height: 150%;
+        color: $darkGrayColor;
         @include adaptive-value("font-size", 20, 16, 1);
         &:not(:last-child) {
             margin: 0px 0px math.div(8px, 20px) * 1em 0px;
@@ -862,10 +862,10 @@ body {
     // .furniture__row
     &__row {
         display: inline-grid;
-        padding: 0px 8px;
-        gap: 16px;
         grid-template-columns: auto;
         grid-auto-flow: column;
+        gap: 16px;
+        padding: 0px 8px;
         &:not(:last-child) {
             margin: 0px 0px 16px 0px;
         }
