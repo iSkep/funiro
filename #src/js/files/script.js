@@ -1,4 +1,4 @@
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", function() {
     document.addEventListener("click", documentActions);
 
     // Actions (click event delegation)
@@ -318,4 +318,4 @@ window.onload = function () {
             }
         });
     }
-}
+})
