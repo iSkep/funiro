@@ -169,8 +169,9 @@ body {
         font-weight: 500;
         line-height: 150%;
         color: $grayColor;
-        &:not(:last-child) {
-            margin: 0px 0px math.div(48px, 20px) * 1em 0px;
+        margin: 0px 0px math.div(48px, 20px) * 1em 0px;
+        @media (max-width: $md2 + "px") {
+            margin: 0;
         }
     }
     // .content-main__button
@@ -184,6 +185,19 @@ body {
         @media (any-hover: hover) {
             &:hover {
                 background: #966749;
+            }
+        }
+        // .content-main__button_pc
+        &_pc {
+            @media (max-width: $md2 + "px") {
+                display: none;
+            }
+        }
+        // .content-main__button_tablet
+        &_tablet {
+            display: none;
+            @media (max-width: $md2 + "px") {
+                display: inline-flex;
             }
         }
     }
